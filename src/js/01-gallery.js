@@ -32,12 +32,9 @@ galleryElList.addEventListener('click', selectImage);
 
 function selectImage(img) {
     img.preventDefault()
-
     if (!img.target.classList.contains("gallery__image")) {
         return
     }
-
-
     const instance = basicLightbox.create(`
     <img src="${img.target.dataset.source}" width="800" height="600">
 `)
